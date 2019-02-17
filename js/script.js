@@ -44,10 +44,10 @@
 		platform.scale.setTo(2,2);
 		platform.body.immovable = true;
 
-		platform = platforms.create(-100,200,'platform');
+		platform = platforms.create(-100,220,'platform');
 		platform.body.immovable = true;
 
-		platform = platforms.create(400,350,'platform');
+		platform = platforms.create(400,400,'platform');
 		platform.body.immovable = true;
 
 		stars = game.add.group();
