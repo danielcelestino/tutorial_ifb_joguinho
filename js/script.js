@@ -1,6 +1,5 @@
 (function(){
-	//var game = new Phaser.Game(340,620,Phaser.AUTO,null,{preload:preload,create:create,update:update});
-	var game = new Phaser.Game(window.innerWidth,window.innerHeight,Phaser.AUTO,null,{preload:preload,create:create,update:update});
+	var game = new Phaser.Game(800,600,Phaser.AUTO,null,{preload:preload,create:create,update:update});
 	var platforms, player, keys, stars,globSndStar,txtScore,score = 0;
 	
 	function preload(){
@@ -16,21 +15,6 @@
 	}
 	
 	function create(){
-		game.input.maxPointers = 1;
-
-		if (this.game.device.desktop) {
-		  this.scale.pageAlignHorizontally = true;
-		} else {
-		  this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		  this.scale.minWidth = 568;
-		  this.scale.minHeight = 600;
-		  this.scale.maxWidth = 2048;
-		  this.scale.maxHeight = 1536;
-		  this.scale.forceLandscape = true;
-		  this.scale.pageAlignHorizontally = true;
-		  this.scale.setScreenSize(true);
-		}
-			
 		globSndStar = game.add.audio('sndStar');
 
 		keys = game.input.keyboard.createCursorKeys();
